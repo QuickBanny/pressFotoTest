@@ -1,0 +1,17 @@
+{% extends 'catalog/index.html' %}
+
+{% block title %}
+{{image.name}}
+{% endblock %}
+
+{% block content %}
+<h1>{{image.name}}</h1>
+	<div class= "image">
+		<img class = "catalog-img" src="{{image.image.url}}">
+		<h2>{{ image.desc}}</h2>
+		<h4>Created: {{ image.date }}</h4>
+		
+
+	</div>
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'catalog/index.html' %}
+{% load humanize i18n %}
+{% block title %}
+Search
+{% endblock %}
+
+{% block content %}
+	<div>
+    	<form action="/search/" method="get">
+        	<input type="text" name="q">
+        	<input type="submit" value="Search">
+    	</form>
+	</div>  
+{% endblock %}

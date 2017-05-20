@@ -1,0 +1,25 @@
+{% extends 'catalog/index.html' %}
+{% load humanize i18n %}
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+
+<div>
+	<h1>Catalog</h1>
+</div>
+
+<div class="row">
+	{% for image in images %}
+	<div class="product col-md-3 col-sm-4 col-xs-12">
+		<h2><a href="{% url 'image' image.id %}">{{ image.name }}</a></h4>
+		<img class = "catalog-img" src="{{image.image.url}}">
+		<h4>{{ image.desc|truncatechars:45}}</h4>
+		<h6>Created: {{ image.date }}</h6>
+    
+    </div>
+	{% endfor %}
+</div>
+
+{% endblock %}
